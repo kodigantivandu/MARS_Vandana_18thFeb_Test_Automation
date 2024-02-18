@@ -24,8 +24,8 @@ namespace Mars_Application_UserStory2_TestAutomation.Mars_ApplicationStepDefinit
            
         }
 
-        //IWebDriver driver = new ChromeDriver();
-/*        Login LoginPageObj = new Login();
+        /*IWebDriver driver = new ChromeDriver();
+        Login LoginPageObj = new Login();
         HomePage HomePageObj = new HomePage();
         ProfilePage ProfilePageObj = new ProfilePage();*/
 
@@ -139,6 +139,11 @@ namespace Mars_Application_UserStory2_TestAutomation.Mars_ApplicationStepDefinit
         {
             ProfilePageObj.CreateDuplicateSkills(driver, skills, skillLevel);
         }
+
+
+        
+
+
 
     }
 }

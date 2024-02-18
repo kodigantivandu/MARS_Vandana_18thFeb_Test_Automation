@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow.CommonModels;
-using Xunit;
+using Assert = Xunit.Assert;
 
 
 namespace Mars_Application_UserStory2_TestAutomation.Pages
@@ -37,8 +37,12 @@ namespace Mars_Application_UserStory2_TestAutomation.Pages
             Thread.Sleep(1000);
             Loginbutton.Click();
 
+
+           
+           
+
             // Verify Page is loaded -- welcome vandana
-          //driver.Quit();
+            //driver.Quit();
         }
         
 

@@ -11,6 +11,7 @@ public class SpecFlowHooks
     private static Login LoginPageObj;
     private static HomePage HomePageObj;
     private static ProfilePage ProfilePageObj;
+    private static SignUpPage SignUpPageObj;
 
     [BeforeTestRun]
     public static void BeforeTestRun()
