@@ -14,7 +14,6 @@ namespace Mars_Application_UserStory2_TestAutomation.Pages
 {
     public class SignUpPage
     {
-
         public void LaunchApplication(IWebDriver driver)
         {
             //Maximize the browser
@@ -27,7 +26,7 @@ namespace Mars_Application_UserStory2_TestAutomation.Pages
 
         }
 
-            public void UserSignUp(IWebDriver driver,string firstname,string lastname,string email,string password,string conpassword)
+        public void UserSignUp(IWebDriver driver, string firstname, string lastname, string email, string password, string conpassword)
         {
             IWebElement JoinButton = driver.FindElement(By.XPath("//*[@id=\"home\"]/div/div/div[1]/div/button"));
             JoinButton.Click();
@@ -59,11 +58,6 @@ namespace Mars_Application_UserStory2_TestAutomation.Pages
 
             IWebElement test1 = driver.FindElement(By.XPath("//*[@id=\"submit-btn\"]"));
             Assert.True(test1.Displayed);
-
-           // var msg = driver.FindElement(By.XPath("/html/body/div[2]/div/div/form/div[4]"));
-            //Assert.True(msg.Displayed);
-            ///html/body/div[5]/div/div/form/div[3]/div
-            
 
         }
 

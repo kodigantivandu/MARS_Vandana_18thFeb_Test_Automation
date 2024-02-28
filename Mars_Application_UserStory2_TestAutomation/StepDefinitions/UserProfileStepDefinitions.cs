@@ -17,17 +17,12 @@ namespace Mars_Application_UserStory2_TestAutomation.Mars_ApplicationStepDefinit
         private readonly Login LoginPageObj = new Login();
         private readonly HomePage HomePageObj = new HomePage();
         private readonly ProfilePage ProfilePageObj = new ProfilePage();
-        
+
         public UserProfileStepDefinitions(IWebDriver driver)
         {
             this.driver = driver;
-           
-        }
 
-        /*IWebDriver driver = new ChromeDriver();
-        Login LoginPageObj = new Login();
-        HomePage HomePageObj = new HomePage();
-        ProfilePage ProfilePageObj = new ProfilePage();*/
+        }
 
         [Given(@"User logs in Mars application using valid username ""([^""]*)"" and password ""([^""]*)""")]
         public void GivenUserLogsInMarsApplicationUsingValidUsernameAndPassword(string username, string password)
@@ -75,20 +70,6 @@ namespace Mars_Application_UserStory2_TestAutomation.Mars_ApplicationStepDefinit
         {
             ProfilePageObj.DeleteLanguage(driver, language, language_level);
         }
-
-
-        /*[When(@"User deletes language details")]
-        public void WDeletesLanguageDetailsAndClicksOnUpdateButton(string language, string language_level)
-        {
-            ProfilePageObj.DeleteLanguage(driver, language, language_level);
-        }*/
-
-        /*[Then(@"Application deletes the lanuage details '([^']*)' '([^']*)' for user")]
-        public void ThenApplicationDeletesTheLanuageDetailsForTheUser(string language, string language_level)
-        {
-            ProfilePageObj.VerifyDeleteLanguage(driver, language, language_level);
-        }*/
-
 
         [Then(@"Application deletes the lanuage details '([^']*)' '([^']*)' for the user")]
         public void DeleteLanugaue(string language, string language_level)
@@ -139,11 +120,5 @@ namespace Mars_Application_UserStory2_TestAutomation.Mars_ApplicationStepDefinit
         {
             ProfilePageObj.CreateDuplicateSkills(driver, skills, skillLevel);
         }
-
-
-        
-
-
-
     }
 }

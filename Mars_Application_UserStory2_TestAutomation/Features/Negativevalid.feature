@@ -5,7 +5,7 @@ Background:
 ## Positive_TC _001 - Log into Mars Application
 Given User launches Mars application
 
-
+@Negative_Valid_Tests
  Scenario: New user clicks join button with existing email
   #  Given  New user clicks join button
     When Enters all required details
@@ -15,7 +15,7 @@ Given User launches Mars application
    # Then User should receive message as Email address already present
 
 
-
+@Negative_Valid_Tests
   Scenario Outline: User enters password field more than  6 charaters
  # Given User Clicks on Sign in button in Mars application portal
  When User enters valid '<username>' '< Password>' field characters more than six characters
@@ -25,6 +25,7 @@ Given User launches Mars application
  | username                     | password  |
   | kodigantivandana@gmail.com | 123456789 |
 
+@Negative_Valid_Tests
 Scenario Outline: User exceedsmax lengthcharacters in language field and language level in profile tab
 Given User logs in Mars application using valid username "kodigantivandana@gmail.com" and password "vandu@28june"
 When User selects Profile tab
@@ -36,6 +37,7 @@ Examples:
 | Language | Language_Level |
 | Englishhhhhhhhhhhhhhhhhhhhhhhhh  | Fluent         |
 
+@Negative_Valid_Test_to_fix
 Scenario Outline: User exceeds max lengthcharacters in skills field and skills level in profile tab
 Given User logs in Mars application using valid username "kodigantivandana@gmail.com" and password "vandu@28june"
 When User selects Profile tab

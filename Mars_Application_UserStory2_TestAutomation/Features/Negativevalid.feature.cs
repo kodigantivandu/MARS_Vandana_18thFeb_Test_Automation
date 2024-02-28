@@ -84,9 +84,11 @@ testRunner.Given("User launches Mars application", ((string)(null)), ((TechTalk.
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("New user clicks join button with existing email")]
+        [NUnit.Framework.CategoryAttribute("Negative_Valid_Tests")]
         public void NewUserClicksJoinButtonWithExistingEmail()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "Negative_Valid_Tests"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("New user clicks join button with existing email", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 9
@@ -123,10 +125,17 @@ this.FeatureBackground();
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("User enters password field more than  6 charaters")]
+        [NUnit.Framework.CategoryAttribute("Negative_Valid_Tests")]
         [NUnit.Framework.TestCaseAttribute("kodigantivandana@gmail.com", "123456789", null)]
         public void UserEntersPasswordFieldMoreThan6Charaters(string username, string password, string[] exampleTags)
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] @__tags = new string[] {
+                    "Negative_Valid_Tests"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("username", username);
             argumentsOfScenario.Add("password", password);
@@ -154,16 +163,23 @@ this.FeatureBackground();
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("User exceedsmax lengthcharacters in language field and language level in profile " +
             "tab")]
+        [NUnit.Framework.CategoryAttribute("Negative_Valid_Tests")]
         [NUnit.Framework.TestCaseAttribute("Englishhhhhhhhhhhhhhhhhhhhhhhhh", "Fluent", null)]
         public void UserExceedsmaxLengthcharactersInLanguageFieldAndLanguageLevelInProfileTab(string language, string language_Level, string[] exampleTags)
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] @__tags = new string[] {
+                    "Negative_Valid_Tests"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Language", language);
             argumentsOfScenario.Add("Language_Level", language_Level);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User exceedsmax lengthcharacters in language field and language level in profile " +
                     "tab", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 28
+#line 29
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -176,14 +192,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 29
+#line 30
 testRunner.Given("User logs in Mars application using valid username \"kodigantivandana@gmail.com\" a" +
                         "nd password \"vandu@28june\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 30
+#line 31
 testRunner.When("User selects Profile tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 31
+#line 32
 testRunner.When(string.Format("User enters new Language details \'{0}\' \'{1}\' and clicks on Add New button", language, language_Level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             }
@@ -193,16 +209,23 @@ testRunner.When(string.Format("User enters new Language details \'{0}\' \'{1}\' 
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("User exceeds max lengthcharacters in skills field and skills level in profile tab" +
             "")]
+        [NUnit.Framework.CategoryAttribute("Negative_Valid_Test_to_fix")]
         [NUnit.Framework.TestCaseAttribute("Manual_Testing_testttttttttttttttttttttttt", "Expert", null)]
         public void UserExceedsMaxLengthcharactersInSkillsFieldAndSkillsLevelInProfileTab(string skills, string skill_Level, string[] exampleTags)
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] @__tags = new string[] {
+                    "Negative_Valid_Test_to_fix"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("skills", skills);
             argumentsOfScenario.Add("Skill_Level", skill_Level);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("User exceeds max lengthcharacters in skills field and skills level in profile tab" +
                     "", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 39
+#line 41
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -215,14 +238,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 40
+#line 42
 testRunner.Given("User logs in Mars application using valid username \"kodigantivandana@gmail.com\" a" +
                         "nd password \"vandu@28june\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 41
+#line 43
 testRunner.When("User selects Profile tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 42
+#line 44
 testRunner.Given(string.Format("User enters new skills detais \'{0}\' \'{1}\'and clicks on Add new button", skills, skill_Level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             }

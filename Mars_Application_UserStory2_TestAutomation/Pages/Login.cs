@@ -36,18 +36,6 @@ namespace Mars_Application_UserStory2_TestAutomation.Pages
             IWebElement Loginbutton = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[4]/button"));
             Thread.Sleep(1000);
             Loginbutton.Click();
-
-
-           
-           
-
-            // Verify Page is loaded -- welcome vandana
-            //driver.Quit();
-        }
-        
-
-
-            //Identify password textbox and enter valid password
-            
+        }   
     }
 }

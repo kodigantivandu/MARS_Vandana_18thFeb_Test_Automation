@@ -48,10 +48,10 @@ namespace Mars_Application_UserStory2_TestAutomation.StepDefinitions
             var confirmPassword = userInformation.Confirm_Password;
 
             SignUpPageObj.UserSignUp(driver, firstName, lastName, emailID, password, confirmPassword);
-            
+
         }
 
-                 
+
 
         [When(@"User enters valid '([^']*)' '([^']*)' field characters more than six characters")]
         public void WhenUserEntersValidFieldCharactersMoreThanSixCharacters(string username, string password)
@@ -61,13 +61,6 @@ namespace Mars_Application_UserStory2_TestAutomation.StepDefinitions
             var msg = driver.FindElement(By.CssSelector("#submit-btn"));
             Assert.True(msg.Displayed);
         }
-
-
-
-
-
-
-
     }
 
     //class used to map table

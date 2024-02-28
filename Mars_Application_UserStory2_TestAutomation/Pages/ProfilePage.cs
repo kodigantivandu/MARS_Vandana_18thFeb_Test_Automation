@@ -120,10 +120,10 @@ namespace Mars_Application_UserStory2_TestAutomation.Pages
             IWebElement AddskillsLevel = driver.FindElement(By.Name("level"));
             AddskillsLevel.SendKeys(skillLevel);
 
-             SelectElement select = new SelectElement(AddskillsLevel);
-             select.SelectByText(skillLevel);
+            SelectElement select = new SelectElement(AddskillsLevel);
+            select.SelectByText(skillLevel);
 
-             Thread.Sleep(1000);
+            Thread.Sleep(1000);
             IWebElement Addbutton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/div/span/input[1]"));
             Addbutton.Click();
 
@@ -146,7 +146,7 @@ namespace Mars_Application_UserStory2_TestAutomation.Pages
         public void EditSkills(IWebDriver driver, string skills, string skill_levels)
         {
             Thread.Sleep(1000);
-            
+
             IWebElement Skilltab = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[2]"));
             Skilltab.Click();
 
@@ -158,7 +158,7 @@ namespace Mars_Application_UserStory2_TestAutomation.Pages
 
             IWebElement SkillName = driver.FindElement(By.Name("name"));
             SkillName.Clear();
-            SkillName.SendKeys(skills +Keys.Tab);
+            SkillName.SendKeys(skills + Keys.Tab);
             ////*[@id="account-profile-section"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody[1]/tr/td[3]/span[1]
             //IWebElement UpdateButton = driver.FindElement(By.XPath("*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody[1]/tr/td[3]/span[1]"));
 
@@ -185,7 +185,6 @@ namespace Mars_Application_UserStory2_TestAutomation.Pages
 
 
         // Extended Positive Tests
-
         public void CreateDuplicateLanguage(IWebDriver driver, string language, string language_level)
 
         {
@@ -194,7 +193,7 @@ namespace Mars_Application_UserStory2_TestAutomation.Pages
             // IWebElement banner = 
             Thread.Sleep(500);
             Assert.True(driver.FindElement(By.ClassName("ns-box-inner")).Displayed);
-            
+
             IWebElement SignOut = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/div[1]/div[2]/div/a[2]/button"));
             SignOut.Click();
 
@@ -205,18 +204,10 @@ namespace Mars_Application_UserStory2_TestAutomation.Pages
         {
             Thread.Sleep(1000);
             CreateSkills(driver, skills, skills_level);
-
-
-/*            IWebElement Skilltab = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[1]/a[2]"));
-            Skilltab.Click();
-            // IWebElement banner = */
             Thread.Sleep(500);
             Assert.True(driver.FindElement(By.CssSelector("body > div.ns-box.ns-growl.ns-effect-jelly.ns-type-error.ns-show > div")).Displayed);
-
             IWebElement SignOut = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/div[1]/div[2]/div/a[2]/button"));
             SignOut.Click();
-
         }
-
     }
 }
